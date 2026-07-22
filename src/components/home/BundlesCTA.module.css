@@ -1,0 +1,12 @@
+.section { background: var(--color-bg); overflow: hidden; }
+.inner { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 600px; }
+.imageWrap { position: relative; min-height: 360px; }
+.content { padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center; gap: 1.4rem; background: var(--color-bg-soft); }
+.title { margin-top: 0.5rem; }
+.sub { font-size: 0.92rem; line-height: 1.85; color: var(--color-text-muted); max-width: 400px; }
+.priceRow { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.price { font-size: 1.5rem; font-weight: 600; }
+.originalPrice { font-size: 1rem; color: var(--color-text-light); text-decoration: line-through; }
+.saving { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #2a7a4b; background: #e8f5ed; padding: 0.2rem 0.6rem; }
+.actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+@media(max-width:900px){ .inner{ grid-template-columns:1fr; } .imageWrap{ min-height:280px; } .content{ padding:3rem 2rem; } }

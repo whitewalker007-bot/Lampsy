@@ -1,0 +1,13 @@
+.pageHeader { padding: 3.5rem 0 2rem; }
+.headerSub { font-size: 0.95rem; color: var(--color-text-muted); margin-top: 1rem; line-height: 1.7; }
+.grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2rem; }
+.card { display: flex; flex-direction: column; background: var(--color-bg-soft); }
+.cardImage { aspect-ratio: 4/3; position: relative; overflow: hidden; }
+.cardContent { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; flex: 1; }
+.cardTitle { font-size: 1.1rem; letter-spacing: 0.04em; }
+.cardDesc { font-size: 0.88rem; line-height: 1.8; color: var(--color-text-muted); }
+.cardPrice { display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
+.price { font-size: 1.3rem; font-weight: 600; }
+.original { font-size: 0.9rem; color: var(--color-text-light); text-decoration: line-through; }
+.save { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #2a7a4b; background: #e8f5ed; padding: 0.2rem 0.55rem; }
+@media(max-width:900px){ .grid{ grid-template-columns:1fr; gap:1.5rem; } }

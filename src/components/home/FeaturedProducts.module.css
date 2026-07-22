@@ -1,0 +1,6 @@
+.section { background: var(--color-bg); }
+.sectionHeader { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; }
+.badge { position: absolute; top: 1rem; left: 1rem; z-index: 2; }
+@media(max-width:900px){ .grid{ grid-template-columns: repeat(2,1fr); gap:1.1rem; } .sectionHeader{ flex-direction:column; align-items:flex-start; } }
+@media(max-width:480px){ .grid{ gap:0.65rem; } }
