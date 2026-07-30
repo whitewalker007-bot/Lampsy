@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { products, formatPrice } from '@/lib/products';
 import styles from './ShopClient.module.css';
 
-const FILTERS = ['All', 'Pigment Defend', 'Repair', 'Clean'];
+const FILTERS = ['All', 'Cleansing', 'Sun Protection', 'Lip Care', 'Overnight Care'];
 
 export default function ShopClient() {
   const searchParams = useSearchParams();
@@ -38,7 +38,7 @@ export default function ShopClient() {
       <div className={styles.pageHeader}>
         <div className="container">
           <p className="label" style={{ marginBottom: '0.6rem' }}>All Products</p>
-          <h1 className="heading-lg">Shop</h1>
+          <h1 className="heading-lg">Shop LAMPSY Collection</h1>
         </div>
       </div>
       <div className="divider" />
@@ -66,22 +66,24 @@ export default function ShopClient() {
             <Link key={p.id} href={`/product/${p.slug}`}
               className={`product-card reveal reveal-delay-${(i % 3) + 1}`}>
               <div className="product-card__image-wrap">
-                <Image src={p.image} alt={p.name} fill style={{ objectFit: 'cover' }}
+                <Image src={p.image} alt={p.name} fill style={{ objectFit: 'contain', background: '#fafafa' }}
                   sizes="(max-width:600px) 50vw, (max-width:1200px) 33vw, 25vw" />
                 {p.badge && <span className="badge" style={{ position: 'absolute', top: '1rem', left: '1rem', zIndex: 2 }}>{p.badge}</span>}
               </div>
               <div className="product-card__info">
-                <p className="product-card__category">{p.category}</p>
-                <h2 className="product-card__name">{p.shortName}</h2>
-                <p className="product-card__price">{formatPrice(p.price)}</p>
+                <p className="product-card__category">{p.category} {p.size ? `· ${p.size}` : ''}</p>
+                <h2 className="product-card__name">{p.name}</h2>
+                <p className="product-card__price">
+                  {p.sizes ? `From ${formatPrice(Math.min(...p.sizes.map(s => s.price)))}` : formatPrice(p.price)}
+                </p>
               </div>
-              <div className="product-card__actions">Add to Cart</div>
+              <div className="product-card__actions">View Product</div>
             </Link>
           ))}
         </div>
         {filtered.length === 0 && (
           <p style={{ color: 'var(--color-text-muted)', textAlign: 'center', padding: '4rem 0' }}>
-            No products found.
+            No products found in this category.
           </p>
         )}
       </div>

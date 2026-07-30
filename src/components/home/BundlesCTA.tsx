@@ -16,13 +16,13 @@ export default function BundlesCTA() {
     return () => obs.disconnect();
   }, []);
 
-  const featuredBundle = bundles[0];
+  const featuredBundle = bundles[0] || bundles[1];
 
   return (
     <section className={styles.section} ref={ref}>
       <div className={styles.inner}>
         <div className={`${styles.imageWrap} reveal`}>
-          <Image src="/images/morning-routine.png" alt="NeoSelf bundle" fill
+          <Image src="/images/hero-banner.png" alt="LAMPSY skincare bundle" fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
             sizes="(max-width:900px) 100vw, 55vw" />
         </div>

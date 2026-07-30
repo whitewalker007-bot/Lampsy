@@ -3,8 +3,8 @@ import { Suspense } from 'react';
 import ShopClient from './ShopClient';
 
 export const metadata: Metadata = {
-  title: 'Shop — NeoSelf Men\'s Skincare',
-  description: 'Browse all NeoSelf products — clinically dosed sunscreen, night cream, and face wash formulated for Indian men\'s skin.',
+  title: 'Shop — LAMPSY Skincare',
+  description: 'Browse the complete LAMPSY skincare collection — Donkey Milk Face Wash, Advanced Sunscreen SPF 50 PA++++, Nourishing Lip Balm, and Overnight Renewal Night Cream.',
 };
 
 export default function ShopPage() {

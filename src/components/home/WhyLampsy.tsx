@@ -1,15 +1,15 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import styles from './WhyNeoSelf.module.css';
+import styles from './WhyLampsy.module.css';
 
 const PILLARS = [
-  { num: '01', title: 'Clinically Dosed', desc: 'Every active in every formula is at the concentration backed by clinical research — not just enough to list it on the label.' },
-  { num: '02', title: 'Built for India', desc: 'Formulas engineered for hot and humid conditions, darker skin tones, and the specific pigmentation challenges of the Indian sun.' },
-  { num: '03', title: 'Radical Transparency', desc: 'We publish our lab reports. Full ingredient percentages. No proprietary blends used to hide ineffective dosing.' },
-  { num: '04', title: 'Only What Works', desc: 'No filler ingredients. No fragrance for the sake of it. No marketing trends without science behind them.' },
+  { num: '01', title: 'Donkey Milk Formula', desc: 'Enriched with natural Donkey Milk, naturally packed with vitamins A, B, C, D, and E to promote gentle skin renewal and radiant glow.' },
+  { num: '02', title: 'SPF 50 PA++++ Shield', desc: 'Maximum broad-spectrum protection against UVA and UVB rays in a lightweight, non-greasy matte finish with zero white cast.' },
+  { num: '03', title: 'Fragrance Free & Gentle', desc: 'Formulated without added fragrance or harsh chemicals to protect sensitive skin and support healthy, natural skin hydration.' },
+  { num: '04', title: 'Safe & Patch Tested', desc: 'We prioritize skin safety with clear directions for use and patch testing recommendations for every skin type.' },
 ];
 
-export default function WhyNeoSelf() {
+export default function WhyLampsy() {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -24,8 +24,8 @@ export default function WhyNeoSelf() {
     <section className={`section-pad ${styles.section}`} ref={ref}>
       <div className="container">
         <div className={`${styles.header} reveal`}>
-          <p className="label" style={{ marginBottom: '0.7rem' }}>Why NeoSelf</p>
-          <h2 className="heading-lg">Science first.<br />Always.</h2>
+          <p className="label" style={{ marginBottom: '0.7rem' }}>Why LAMPSY</p>
+          <h2 className="heading-lg">Purity & Protection.<br />Every Single Day.</h2>
         </div>
         <div className="divider" style={{ margin: '2.5rem 0 3.5rem' }} />
         <div className={styles.grid}>

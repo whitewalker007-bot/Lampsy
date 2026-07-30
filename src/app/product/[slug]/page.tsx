@@ -8,9 +8,9 @@ interface Props { params: Promise<{ slug: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  if (!product) return { title: 'Product not found — NeoSelf' };
+  if (!product) return { title: 'Product not found — LAMPSY Skincare' };
   return {
-    title: `${product.name} — NeoSelf`,
+    title: `${product.name} — LAMPSY Skincare`,
     description: product.description,
   };
 }

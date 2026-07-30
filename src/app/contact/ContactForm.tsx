@@ -6,8 +6,8 @@ export default function ContactForm() {
     <div style={{ paddingTop: 'var(--nav-height)' }}>
       <div className="container-narrow section-pad">
         <p className="label" style={{ marginBottom: '0.6rem' }}>Get in Touch</p>
-        <h1 className="heading-lg" style={{ marginBottom: '0.75rem' }}>Contact</h1>
-        <p className={styles.sub}>Have a question about our products, ingredients, or your order? We&apos;re here.</p>
+        <h1 className="heading-lg" style={{ marginBottom: '0.75rem' }}>Contact LAMPSY</h1>
+        <p className={styles.sub}>Have a question about our products, ingredients, patch testing, or your order? We&apos;re here to help.</p>
 
         <div className="divider" style={{ margin: '2.5rem 0' }} />
 
@@ -50,12 +50,18 @@ export default function ContactForm() {
 
         <div className={styles.info}>
           <div>
-            <p className="label" style={{ marginBottom: '0.5rem' }}>Email</p>
-            <a href="mailto:hello@neoselfmen.com" className={styles.infoLink}>hello@neoselfmen.com</a>
+            <p className="label" style={{ marginBottom: '0.5rem' }}>Email Us</p>
+            <a href="mailto:lampsystore2@gmail.com" className={styles.infoLink}>lampsystore2@gmail.com</a>
           </div>
           <div>
-            <p className="label" style={{ marginBottom: '0.5rem' }}>Website</p>
-            <a href="https://www.neoselfmen.com" target="_blank" rel="noopener noreferrer" className={styles.infoLink}>www.neoselfmen.com</a>
+            <p className="label" style={{ marginBottom: '0.5rem' }}>Phone</p>
+            <a href="tel:7356539382" className={styles.infoLink}>+91 7356539382</a>
+          </div>
+          <div>
+            <p className="label" style={{ marginBottom: '0.5rem' }}>Store Address</p>
+            <p className={styles.infoLink} style={{ color: 'var(--color-text)' }}>
+              Ashoka Road, Kaloor<br />Kochi, Kerala, 682017
+            </p>
           </div>
         </div>
       </div>

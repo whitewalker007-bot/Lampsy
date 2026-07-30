@@ -21,8 +21,8 @@ export default function FeaturedProducts() {
       <div className="container">
         <div className={`${styles.sectionHeader} reveal`}>
           <div>
-            <p className="label" style={{ marginBottom: '0.6rem' }}>The Edit</p>
-            <h2 className="heading-lg">Best Sellers</h2>
+            <p className="label" style={{ marginBottom: '0.6rem' }}>The Collection</p>
+            <h2 className="heading-lg">Featured Skincare</h2>
           </div>
           <Link href="/shop" className="btn btn-ghost">View All</Link>
         </div>
@@ -36,12 +36,14 @@ export default function FeaturedProducts() {
                   style={{ objectFit: 'cover' }}
                   sizes="(max-width:600px) 50vw, (max-width:1200px) 33vw, 25vw" />
                 {p.badge && <span className={`badge ${styles.badge}`}>{p.badge}</span>}
-                <div className="product-card__actions">Add to Cart</div>
+                <div className="product-card__actions">View Details</div>
               </div>
               <div className="product-card__info">
-                <p className="product-card__category">{p.category}</p>
-                <h3 className="product-card__name">{p.shortName}</h3>
-                <p className="product-card__price">{formatPrice(p.price)}</p>
+                <p className="product-card__category">{p.category} {p.size ? `· ${p.size}` : ''}</p>
+                <h3 className="product-card__name">{p.name}</h3>
+                <p className="product-card__price">
+                  {p.sizes ? `From ${formatPrice(Math.min(...p.sizes.map(s => s.price)))}` : formatPrice(p.price)}
+                </p>
               </div>
             </Link>
           ))}

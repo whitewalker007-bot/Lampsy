@@ -1,3 +1,8 @@
+export interface ProductSize {
+  size: string;
+  price: number;
+}
+
 export interface Product {
   id: string;
   slug: string;
@@ -9,160 +14,229 @@ export interface Product {
   price: number;
   originalPrice?: number;
   image: string;
+  images?: string[];
   badge?: string;
   benefits: string[];
   howToUse: string;
+  importantNote?: string;
   ingredients: { name: string; benefit: string }[];
   description: string;
+  size?: string;
+  sizes?: ProductSize[];
 }
 
 export const products: Product[] = [
   {
-    id: 'sunscreen-001',
-    slug: 'pigment-control-daily-sunscreen',
-    name: 'Pigment-Control Daily Sunscreen',
-    shortName: 'Daily Sunscreen SPF 50+',
-    category: 'Pigment Defend',
-    categorySlug: 'pigment-defend',
-    tagline: 'Stop sun damage before it becomes pigmentation.',
-    price: 849,
-    badge: 'Best Seller',
-    image: '/images/sunscreen.png',
+    id: 'facewash-001',
+    slug: 'donkey-milk-face-wash',
+    name: 'Donkey Milk Face Wash',
+    shortName: 'Donkey Milk Face Wash',
+    category: 'Cleansing',
+    categorySlug: 'cleansing',
+    tagline: 'Moisturizing & skin brightening face wash with Vitamin C & Lactic Acid.',
+    price: 270,
+    size: '100ml',
+    badge: 'Bestseller',
+    image: '/images/facewash.png',
+    images: ['/images/facewash.png', '/images/facewash-lifestyle.png'],
     description:
-      'Broad-spectrum SPF 50+ engineered specifically for Indian skin and the relentless Indian sun. Clinically dosed to prevent tanning, reduce dark spots, and protect your skin barrier — all without the white cast.',
+      'Formulated with genuine Donkey Milk extract, Vitamin C, and Lactic Acid. Delivers natural exfoliation, skin renewal, anti-ageing protection, and a spotless, glowing complexion while keeping your skin moisturized and soft.',
     benefits: [
-      'Powerful broad-spectrum UVA/UVB protection',
-      'Helps prevent tanning and sun-induced darkening',
-      'Helps reduce the appearance of dark spots over time',
-      'Helps strengthen and soothe the skin barrier',
-      'Lightweight, non-greasy, invisible finish',
-      'Designed for hot and humid conditions',
+      'Moisturizing properties',
+      'Helps brightening and spotless glowing skin',
+      'Helps in skin renewal',
+      'Fights ageing',
+      'Gives natural exfoliation',
     ],
     howToUse:
-      'Apply two finger-lengths evenly across face & neck as the final step of your morning routine. Reapply every 4 hours — and after swimming, sweating or towel-drying.',
+      'Apply a small amount of Donkey milk face wash on damp face. Work up a mild lather and scrub with lukewarm water or tap water and pat dry with a clean towel. You will feel fresh and soft skin.',
+    importantNote:
+      'Skincare results may vary from person to person, as every individual’s skin is different. We strongly recommend performing a patch test before applying the product to the entire face. Discontinue use if any irritation or adverse reaction occurs.',
     ingredients: [
-      { name: 'Filter System', benefit: 'Broad-spectrum UV defence' },
-      { name: 'Butylresorcinol', benefit: 'Targeted pigment control' },
-      { name: 'Niacinamide', benefit: 'Tone & barrier support' },
-      { name: 'Panthenol', benefit: 'Hydration & recovery' },
-      { name: 'Beta-Glucan', benefit: 'Calming hydration' },
+      { name: 'Donkey Milk Extract', benefit: 'Rich in essential proteins, vitamins A to E, and natural skin renewal properties' },
+      { name: 'Vitamin C', benefit: 'Potent antioxidant for bright, spotless, and radiant skin' },
+      { name: 'Lactic Acid (AHA)', benefit: 'Gentle natural exfoliation and smoothing of skin texture' },
+      { name: 'Moisturizing Complex', benefit: 'Deep hydrating agents to prevent over-drying' },
+    ],
+  },
+  {
+    id: 'soap-001',
+    slug: 'donkey-milk-soap',
+    name: 'Donkey Milk Soap',
+    shortName: 'Donkey Milk Soap',
+    category: 'Cleansing',
+    categorySlug: 'cleansing',
+    tagline: 'Gentle everyday cleansing bar enriched with moisturizing Donkey Milk.',
+    price: 190,
+    size: '100gm',
+    badge: 'New',
+    image: '/images/donkey-milk-soap.jpg',
+    images: ['/images/donkey-milk-soap.jpg'],
+    description:
+      'LAMPSY Donkey Milk Soap is formulated for gentle everyday cleansing without excessive dryness. Enriched with natural Donkey Milk to leave skin soft, smooth, refreshed, and supple with a healthy-looking glow.',
+    benefits: [
+      'Helps cleanse skin gently without excessive dryness.',
+      'Helps keep skin soft, smooth and moisturised.',
+      'Supports a fresh, healthy-looking glow.',
+      'Helps improve the appearance of rough, dry skin.',
+      'Leaves skin feeling refreshed and supple.',
+      'Suitable for everyday cleansing.',
+    ],
+    howToUse:
+      'Wet the skin and soap, gently lather and massage over the body/face as appropriate. Rinse thoroughly with clean water and pat dry. For external use only.',
+    importantNote:
+      'Skincare results may vary from person to person, as every individual’s skin is different. We strongly recommend performing a patch test before applying the product to the entire face. Discontinue use if any irritation or adverse reaction occurs.',
+    ingredients: [
+      { name: 'Donkey Milk Extract', benefit: 'Rich in vitamins & natural moisturizers for skin softness' },
+      { name: 'Natural Soap Base', benefit: 'Gentle everyday cleansing without stripping moisture' },
+      { name: 'Hydrating Glycerin', benefit: 'Locks moisture and leaves skin supple and refreshed' },
+    ],
+  },
+  {
+    id: 'sunscreen-001',
+    slug: 'matte-sunscreen-spf-50',
+    name: 'Advanced Sunscreen SPF 50 PA++++',
+    shortName: 'Sunscreen SPF 50',
+    category: 'Sun Protection',
+    categorySlug: 'sun-care',
+    tagline: 'Enriched with Hyaluronic Acid & Vitamin E for maximum protection & non-greasy matte finish.',
+    price: 699,
+    size: '50gm',
+    badge: 'SPF 50 PA++++',
+    image: '/images/sunscreen.png',
+    images: ['/images/sunscreen.png', '/images/sunscreen-back.png'],
+    description:
+      'LAMPSY Advanced Sunscreen SPF 50 PA++++ provides maximum broad-spectrum protection against UVA & UVB rays. Helps prevent sunburn, tanning, and premature aging with a matte, non-greasy finish. Enriched with Hyaluronic Acid and Vitamin E.',
+    benefits: [
+      'SPF 50 and PA++++ (Ensure maximum protection from sun exposure. Shields against UVA & UVB)',
+      'Matte, Non-greasy finish (No oily or sticky feel)',
+      'Hydrates skin and Locks moisture (Keep your skin soft and moisturised)',
+      'Fragrance Free (Added no fragrance)',
+    ],
+    howToUse:
+      'Apply generously and evenly to the face, neck, and other exposed areas 15–20 minutes before sun exposure. Reapply every 2 hours, and more frequently after sweating, swimming, or towel-drying. Use daily as the final step of your morning skincare routine.',
+    importantNote:
+      'Skincare results may vary from person to person, as every individual’s skin is different. We strongly recommend performing a patch test before applying the product to the entire face. Discontinue use if any irritation or adverse reaction occurs.',
+    ingredients: [
+      { name: 'UV Filter Matrix (Tinosorb S, Avobenzone, Octinoxate, Octocrylene)', benefit: 'Broad-spectrum defense against UVA & UVB rays' },
+      { name: 'Hyaluronic Acid', benefit: 'Locks in deep skin moisture' },
+      { name: 'Vitamin E', benefit: 'Antioxidant protection against free radicals' },
+      { name: 'Silicone Elastomers Blend', benefit: 'Non-greasy, matte, silky smooth finish' },
+    ],
+  },
+  {
+    id: 'lipbalm-001',
+    slug: 'nourishing-lip-balm',
+    name: 'Nourishing Lip Balm',
+    shortName: 'Lip Balm',
+    category: 'Lip Care',
+    categorySlug: 'lip-care',
+    tagline: 'Deeply moisturizes and protects dry lips for long-lasting softness.',
+    price: 250,
+    size: '10gm',
+    badge: 'Rose Infused',
+    image: '/images/lipbalm.png',
+    images: ['/images/lipbalm.png'],
+    description:
+      'Formulated to deeply moisturize dry lips, preventing chapping, flaking, and environmental damage. Keeps lips soft, smooth, supple, and naturally healthy-looking.',
+    benefits: [
+      'Deeply moisturises and nourishes dry lips',
+      'Helps prevent dryness, chapping & flaking',
+      'Keeps lips soft, smooth & supple',
+      'Helps protect lips from environmental dryness',
+      'Supports healthy-looking, naturally soft lips',
+    ],
+    howToUse:
+      'Apply evenly over clean, dry lips. Reapply throughout the day as needed, especially after eating or drinking. Use regularly for soft, moisturised lips.',
+    importantNote:
+      'Skincare results may vary from person to person, as every individual’s skin is different. We strongly recommend performing a patch test before applying the product to the entire face. Discontinue use if any irritation or adverse reaction occurs.',
+    ingredients: [
+      { name: 'Rose & Botanical Extracts', benefit: 'Nourishes and soothes dry, delicate lip skin' },
+      { name: 'Natural Oils & Butters', benefit: 'Provides deep moisture and prevents chapping' },
+      { name: 'Beeswax Seal', benefit: 'Protects against environmental dryness' },
     ],
   },
   {
     id: 'nightcream-001',
-    slug: 'repair-night-cream',
-    name: 'Repair Night Cream',
+    slug: 'overnight-renewal-night-cream',
+    name: 'Overnight Renewal Night Cream',
     shortName: 'Night Cream',
-    category: 'Repair',
-    categorySlug: 'repair',
-    tagline: 'Rebuild your skin barrier while you sleep.',
-    price: 999,
-    badge: 'New',
-    image: '/images/nightcream.png',
+    category: 'Overnight Care',
+    categorySlug: 'overnight-care',
+    tagline: 'Rejuvenate and repair your skin overnight for a youthful, glowing complexion.',
+    price: 1499,
+    size: '60gm',
+    sizes: [
+      { size: '20gm', price: 499 },
+      { size: '30gm', price: 899 },
+      { size: '60gm', price: 1499 },
+    ],
+    badge: 'Restorative Care',
+    image: '/images/nightcream.jpg',
+    images: ['/images/nightcream.jpg'],
     description:
-      "An evidence-backed night cream that works with your skin's natural repair cycle. Deep moisture, active repair, and barrier restoration — so you wake up to genuinely better skin.",
+      'An intensive overnight restorative cream engineered with rich Donkey Milk proteins, hydrating Peptides, and Ceramides. Rebuilds the skin barrier, boosts elasticity, locks in deep moisture, and restores natural radiance while you sleep.',
     benefits: [
-      'Repairs and rebuilds the skin barrier overnight',
-      'Delivers deep, long-lasting hydration',
-      'Reduces appearance of uneven texture',
-      'Calms post-sun inflammation',
-      'Supports collagen synthesis',
+      'Deeply restores and rejuvenates skin overnight',
+      'Enriched with nourishing Donkey Milk & Hydrating Peptides',
+      'Promotes elasticity and smooth skin texture',
+      'Locks in moisture and repairs daily environmental skin damage',
+      'Fades fine lines and boosts natural skin glow',
     ],
     howToUse:
-      'Apply a pea-sized amount to cleansed face and neck. Gently massage upwards until absorbed. Use every night as the last step of your evening routine.',
+      'Apply a small amount to cleansed face and neck every evening before sleep. Gently massage in upward circular motions until fully absorbed. Use nightly for best results.',
+    importantNote:
+      'Skincare results may vary from person to person, as every individual’s skin is different. We strongly recommend performing a patch test before applying the product to the entire face. Discontinue use if any irritation or adverse reaction occurs.',
     ingredients: [
-      { name: 'Retinol 0.1%', benefit: 'Accelerated cell renewal' },
-      { name: 'Ceramide Complex', benefit: 'Barrier restoration' },
-      { name: 'Hyaluronic Acid', benefit: 'Deep hydration' },
-      { name: 'Peptides', benefit: 'Collagen support' },
-      { name: 'Centella Asiatica', benefit: 'Soothing & repair' },
-    ],
-  },
-  {
-    id: 'facewash-001',
-    slug: 'clean-face-wash',
-    name: 'Clean Face Wash',
-    shortName: 'Face Wash / Cleanser',
-    category: 'Clean',
-    categorySlug: 'clean',
-    tagline: 'Clean without stripping. Every single time.',
-    price: 499,
-    image: '/images/facewash.png',
-    description:
-      "A pH-balanced cleanser formulated for men's naturally oilier skin. Removes dirt, sweat, and sunscreen efficiently without disrupting your skin's moisture barrier.",
-    benefits: [
-      'pH-balanced to protect skin barrier',
-      'Removes sweat, sebum, and sunscreen effectively',
-      'Prevents breakouts with salicylic acid',
-      'Soothing botanical extracts prevent over-drying',
-      'Suitable for daily use, morning and night',
-    ],
-    howToUse:
-      'Wet face with lukewarm water. Apply a small amount to palms, lather, and massage gently for 30–60 seconds. Rinse thoroughly. Use twice daily.',
-    ingredients: [
-      { name: 'Salicylic Acid 0.5%', benefit: 'Pore clearing & breakout prevention' },
-      { name: 'Aloe Vera', benefit: 'Soothing hydration' },
-      { name: 'Niacinamide', benefit: 'Pore minimising' },
-      { name: 'Glycerin', benefit: 'Moisture retention' },
-      { name: 'Green Tea Extract', benefit: 'Antioxidant protection' },
+      { name: 'Donkey Milk & Peptide Complex', benefit: 'Accelerates collagen & cell regeneration' },
+      { name: 'Hyaluronic Acid 2%', benefit: 'Multi-depth overnight hydration' },
+      { name: 'Ceramides & Niacinamide', benefit: 'Restores skin barrier & evens tone' },
     ],
   },
 ];
 
 export const bundles = [
   {
-    id: 'bundle-full',
-    slug: 'complete-routine-bundle',
-    name: 'Complete Routine Bundle',
-    shortName: 'Defend + Repair + Clean',
-    tagline: 'Everything your skin needs. Morning to night.',
-    price: 1999,
-    originalPrice: 2347,
-    badge: 'Best Value',
-    image: '/images/bundle-all.png',
-    bundleProducts: ['sunscreen-001', 'nightcream-001', 'facewash-001'],
-    description:
-      'The full NeoSelf system — designed to work as a single, synergistic routine. Protect during the day, cleanse at night, repair while you sleep.',
-  },
-  {
-    id: 'bundle-defend-repair',
-    slug: 'defend-repair-bundle',
-    name: 'Defend + Repair Bundle',
-    shortName: 'Defend + Repair',
-    tagline: 'Protect, repair, transform.',
-    price: 1599,
-    originalPrice: 1848,
+    id: 'bundle-glowing-duo',
+    slug: 'glowing-day-duo',
+    name: 'LAMPSY Daily Protection Duo',
+    shortName: 'Face Wash + Sunscreen',
+    tagline: 'Cleanse and shield your skin every morning.',
+    price: 899,
+    originalPrice: 969,
     badge: 'Popular',
-    image: '/images/bundle-all.png',
-    bundleProducts: ['sunscreen-001', 'nightcream-001'],
+    image: '/images/facewash.png',
+    bundleProducts: ['facewash-001', 'sunscreen-001'],
     description:
-      'Protection in the AM, repair in the PM. The two-step system for men battling pigmentation.',
+      'Start your day with Donkey Milk Face Wash for spotless glow, followed by Advanced Sunscreen SPF 50 for all-day sun protection.',
   },
   {
-    id: 'bundle-defend-clean',
-    slug: 'defend-clean-bundle',
-    name: 'Defend + Clean Bundle',
-    shortName: 'Defend + Clean',
-    tagline: 'The daily essentials.',
-    price: 1199,
-    originalPrice: 1348,
-    image: '/images/bundle-all.png',
-    bundleProducts: ['sunscreen-001', 'facewash-001'],
+    id: 'bundle-donkey-milk-duo',
+    slug: 'donkey-milk-cleansing-duo',
+    name: 'LAMPSY Donkey Milk Cleansing Duo',
+    shortName: 'Face Wash + Soap',
+    tagline: 'Double the natural nourishing power of Donkey Milk.',
+    price: 430,
+    originalPrice: 460,
+    badge: 'Donkey Milk Duo',
+    image: '/images/donkey-milk-soap.jpg',
+    bundleProducts: ['facewash-001', 'soap-001'],
     description:
-      'Start clean, stay protected. The daily duo for men who want a simple, effective skincare routine.',
+      'Pure natural cleansing duo featuring Donkey Milk Face Wash for facial brightening and Donkey Milk Soap for everyday body & face softness.',
   },
   {
-    id: 'bundle-repair-clean',
-    slug: 'repair-clean-bundle',
-    name: 'Repair + Clean Bundle',
-    shortName: 'Repair + Clean',
-    tagline: 'Cleanse, restore, repeat.',
-    price: 1299,
-    originalPrice: 1498,
-    image: '/images/bundle-all.png',
-    bundleProducts: ['nightcream-001', 'facewash-001'],
+    id: 'bundle-complete-system',
+    slug: 'complete-lampsy-routine',
+    name: 'LAMPSY Complete Routine Pack',
+    shortName: 'Full Routine',
+    tagline: 'Complete care for face, body, lips, and overnight repair.',
+    price: 2699,
+    originalPrice: 2908,
+    badge: 'Best Value',
+    image: '/images/hero-banner.png',
+    bundleProducts: ['facewash-001', 'soap-001', 'sunscreen-001', 'nightcream-001', 'lipbalm-001'],
     description:
-      'For men who already use sunscreen. Add a proper cleanser and night cream to complete your routine.',
+      'The ultimate LAMPSY routine: Donkey Milk Face Wash, Donkey Milk Soap, Advanced Sunscreen SPF 50, Nourishing Lip Balm, and Overnight Renewal Night Cream (60gm).',
   },
 ];
 

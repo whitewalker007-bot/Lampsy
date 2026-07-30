@@ -5,8 +5,8 @@ import { bundles, formatPrice } from '@/lib/products';
 import styles from './bundles.module.css';
 
 export const metadata: Metadata = {
-  title: 'Bundles — NeoSelf Men\'s Skincare',
-  description: 'Shop NeoSelf skincare bundles and save. Complete routine bundles designed to work together.',
+  title: 'Bundles — LAMPSY Skincare',
+  description: 'Shop LAMPSY skincare bundles and save. Complete routine bundles designed to work together.',
 };
 
 export default function BundlesPage() {
@@ -15,10 +15,10 @@ export default function BundlesPage() {
       <div className={styles.pageHeader}>
         <div className="container">
           <p className="label" style={{ marginBottom: '0.6rem' }}>Save More</p>
-          <h1 className="heading-lg">Bundles</h1>
+          <h1 className="heading-lg">LAMPSY Routine Bundles</h1>
           <p className={styles.headerSub}>
-            Every NeoSelf product is formulated to work together.<br />
-            Bundle for a complete routine — and save.
+            Every LAMPSY product is formulated to work together.<br />
+            Bundle for a complete skincare routine — and save.
           </p>
         </div>
       </div>
@@ -32,7 +32,7 @@ export default function BundlesPage() {
               <div key={b.id} className={styles.card}>
                 <div className={styles.cardImage}>
                   <Image src={b.image} alt={b.name} fill
-                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    style={{ objectFit: 'contain', background: '#fafafa' }}
                     sizes="(max-width:900px) 100vw, 50vw" />
                   {b.badge && <span className={`badge ${b.badge === 'Best Value' ? 'badge-warm' : ''}`}
                     style={{ position: 'absolute', top: '1rem', left: '1rem', zIndex: 2 }}>
