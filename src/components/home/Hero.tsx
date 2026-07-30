@@ -94,7 +94,7 @@ export default function Hero() {
 
           <h1 className={`heading-xl ${styles.h1}`}>
             Glow. Nourish.<br />
-            <span className={styles.h1Italic}>Protect. Repeat.</span>
+            <span className={styles.h1Italic}>Protect. Repeat. 🤍</span>
           </h1>
 
           <p className={styles.sub}>
