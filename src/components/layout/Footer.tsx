@@ -8,7 +8,7 @@ export default function Footer() {
       <div className={styles.values}>
         <div className="container">
           <div className={styles.valuesInner}>
-            {['Donkey Milk Skincare', 'Formulated for All Skin Types', 'Clean & Natural Ingredients', 'Patch Test Recommended'].map((v) => (
+            {['Dermatologically Tested', 'Formulated for All Skin Types', 'Clean & Natural Ingredients', 'Patch Test Recommended'].map((v) => (
               <span key={v} className={styles.value}>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" strokeOpacity=".35"/><path d="M4 7l2 2 4-4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 {v}
