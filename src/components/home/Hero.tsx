@@ -93,13 +93,12 @@ export default function Hero() {
           </p>
 
           <h1 className={`heading-xl ${styles.h1}`}>
-            Pure Care.<br />
-            <span className={styles.h1Italic}>Radiant Glow.</span>
+            Glow. Nourish.<br />
+            <span className={styles.h1Italic}>Protect. Repeat.</span>
           </h1>
 
           <p className={styles.sub}>
-            Enriched with Donkey Milk, Peptides, Hyaluronic Acid, and SPF 50 PA++++.<br />
-            Experience gentle skin renewal, deep hydration, and spotless protection.
+            Discover skincare designed to bring out your skin’s natural radiance while keeping it beautifully cared for. 🌿✨
           </p>
 
           <div className={styles.ctas}>

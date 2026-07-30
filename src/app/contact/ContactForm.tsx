@@ -101,10 +101,6 @@ export default function ContactForm() {
             <a href="mailto:lampsystore2@gmail.com" className={styles.infoLink}>lampsystore2@gmail.com</a>
           </div>
           <div>
-            <p className="label" style={{ marginBottom: '0.5rem' }}>Phone</p>
-            <a href="tel:7356539382" className={styles.infoLink}>+91 7356539382</a>
-          </div>
-          <div>
             <p className="label" style={{ marginBottom: '0.5rem' }}>Store Address</p>
             <p className={styles.infoLink} style={{ color: 'var(--color-text)' }}>
               Ashoka Road, Kaloor<br />Kochi, Kerala, 682017

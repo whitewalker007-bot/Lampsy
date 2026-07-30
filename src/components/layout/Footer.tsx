@@ -64,9 +64,6 @@ export default function Footer() {
                   <strong>Email:</strong> <a href="mailto:lampsystore2@gmail.com" style={{ color: 'inherit' }}>lampsystore2@gmail.com</a>
                 </li>
                 <li style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>
-                  <strong>Phone:</strong> <a href="tel:7356539382" style={{ color: 'inherit' }}>+91 7356539382</a>
-                </li>
-                <li style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)' }}>
                   <strong>Address:</strong> Ashoka Road, Kaloor, Kochi, Kerala, 682017
                 </li>
               </ul>
@@ -92,7 +89,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.bottom}>
           <p className={styles.copy}>© {new Date().getFullYear()} LAMPSY Skincare. All rights reserved.</p>
-          <p className={styles.domain}>Ashoka Road, Kaloor, Kochi, Kerala, 682017 | Ph: 7356539382</p>
+          <p className={styles.domain}>Ashoka Road, Kaloor, Kochi, Kerala, 682017</p>
         </div>
       </div>
     </footer>
