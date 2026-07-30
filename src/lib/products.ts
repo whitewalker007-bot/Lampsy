@@ -177,14 +177,14 @@ export const products: Product[] = [
     description:
       'An intensive overnight restorative cream engineered with rich Donkey Milk proteins, hydrating Peptides, and Ceramides. Rebuilds the skin barrier, boosts elasticity, locks in deep moisture, and restores natural radiance while you sleep.',
     benefits: [
-      'Deeply restores and rejuvenates skin overnight',
-      'Enriched with nourishing Donkey Milk & Hydrating Peptides',
-      'Promotes elasticity and smooth skin texture',
-      'Locks in moisture and repairs daily environmental skin damage',
-      'Fades fine lines and boosts natural skin glow',
+      'Brightens dull skin and enhances natural radiance.',
+      'Helps reduce the appearance of dark spots and pigmentation.',
+      'Helps fade the appearance of acne marks and blemishes.',
+      'Improves uneven skin tone and texture.',
+      'Helps reduce the appearance of fine lines and early signs of ageing.',
     ],
     howToUse:
-      'Apply a small amount to cleansed face and neck every evening before sleep. Gently massage in upward circular motions until fully absorbed. Use nightly for best results.',
+      'For night-time use only. Apply a small, even layer of the product over the face and leave it overnight.\n\nThere is no need to massage the product into the skin. Simply spread it evenly across the face. Wash thoroughly in the next morning .\n\nDuring the daytime, always use a broad-spectrum sunscreen with SPF 50 and reapply every 2 hours, especially when exposed to sunlight.',
     importantNote:
       'Skincare results may vary from person to person, as every individual’s skin is different. We strongly recommend performing a patch test before applying the product to the entire face. Discontinue use if any irritation or adverse reaction occurs.',
     ingredients: [

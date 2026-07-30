@@ -177,8 +177,8 @@ export default function ProductClient({ product }: Props) {
               </ul>
             </Accordion>
 
-            <Accordion title="Direction for Use">
-              <p>{product.howToUse}</p>
+            <Accordion title="Directions for Use">
+              <p style={{ whiteSpace: 'pre-line', lineHeight: '1.65' }}>{product.howToUse}</p>
             </Accordion>
 
             <Accordion title="Key Ingredients">
